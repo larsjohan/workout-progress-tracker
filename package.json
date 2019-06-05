@@ -1,0 +1,34 @@
+{
+  "name": "workout-progress-tracker",
+  "version": "0.1.0-alpha",
+  "description": "\"A workout progress tracker for desktop\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larsjohan/workout-progress-tracker.git"
+  },
+  "keywords": [
+    "workout",
+    "progress",
+    "tracker",
+    "tracking",
+    "stats",
+    "training",
+    "fitness",
+    "nutrition",
+    "body",
+    "impovement"
+  ],
+  "author": "Lars Johan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/larsjohan/workout-progress-tracker/issues"
+  },
+  "homepage": "https://github.com/larsjohan/workout-progress-tracker#readme",
+  "devDependencies": {
+    "electron": "^5.0.2"
+  }
+}
