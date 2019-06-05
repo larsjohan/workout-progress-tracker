@@ -2,9 +2,10 @@
   "name": "workout-progress-tracker",
   "version": "0.1.0-alpha",
   "description": "\"A workout progress tracker for desktop\"",
-  "main": "index.js",
+  "main": "src/main/index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
