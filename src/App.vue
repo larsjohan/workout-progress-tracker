@@ -1,20 +1,22 @@
 <template>
   <div id="app">  
-    <nav>
-      <Header></Header>
-    </nav>
-    <router-view/>
+    <aside>
+      <Navbar></Navbar>
+    </aside>
+    <main>
+      <router-view/>
+    </main>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component';
-import Header from './components/layout/Header.vue';
+import Navbar from './components/layout/Navbar.vue';
 import { Provide } from 'vue-property-decorator';
 
 @Component({
-  components: { Header }
+  components: { Navbar }
 })
 export default class App extends Vue {
 

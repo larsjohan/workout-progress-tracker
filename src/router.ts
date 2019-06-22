@@ -1,27 +1,43 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Log from './views/Log.vue';
+import Graph from './views/Graph.vue';
+import Excercise from './views/Excercise.vue';
+import Measurement from './views/Measurements.vue';
+import Nutrition from './views/Nutrition.vue';
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      redirect: '/home'
+      redirect: '/log'
     },
     {
-      path: '/home',
-      name: 'home',
-      component: Home
+      path: '/log',
+      component: Log
+    },
+    {
+      path: '/graph',
+      name: 'graph',
+      component: Graph
+    },
+    {
+      path: '/excercise',
+      name: 'excercise',
+      component: Excercise
+    },
+    {
+      path: '/measurement',
+      name: 'measurement',
+      component: Measurement
+    },
+    {
+      path: '/nutrition',
+      name: 'nutrition',
+      component: Nutrition
     }
-    //{
-      //path: '/about',
-      //name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-    //  component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    //}
   ]
 })
