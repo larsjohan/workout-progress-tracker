@@ -1,19 +1,24 @@
 <template>
     <div class="navbar">
         <router-link class="link" active-class="active" to="/log">
-            <List></List>
+            <List class="link-icon"></List>
+            <p class="label">Log</p>
         </router-link>
         <router-link class="link" active-class="active" to="/graph">
-            <Graph></Graph>
+            <Graph class="link-icon"></Graph>
+            <p class="label">Statistics</p>
         </router-link>
         <router-link class="link" active-class="active" to="/excercise">
-            <Weightlifting></Weightlifting>
+            <Weightlifting class="link-icon"></Weightlifting>
+            <p class="label">Excercises</p>
         </router-link>
         <router-link class="link" active-class="active" to="/measurement">
-            <MeasuringTape></MeasuringTape>
+            <MeasuringTape class="link-icon"></MeasuringTape>
+            <p class="label">Measurements</p>
         </router-link>
         <router-link class="link" active-class="active" to="/nutrition">
-            <Nutrition></Nutrition>
+            <Nutrition class="link-icon"></Nutrition>
+            <p class="label">Nutrition</p>
         </router-link>
     </div>
 </template>
@@ -64,27 +69,51 @@ export default class Navbar extends Vue {
         justify-content: space-evenly;
 
         & .link {
-            margin: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            height: 50px;
+
+            & .link-icon {
+                width: 40px;
+            }
 
             &:link,
             &:active,
             &:hover,
             &:visited {
                 color: $txt;
+                text-decoration: none;
             }
 
             &:hover {
-                margin: 0;
+                color: $primary;
             }
 
             &.active {
-                border-right: 4px solid $primary;
-                box-sizing: border-box;
-                margin: 0;
-                padding: 2px;
+                border-left: 4px solid $primary;
+                color: $primary;
                 cursor: default;
             }
 
+            & .label {
+                display: none;
+                margin-left: 10px;
+                font-size: 20px;
+            }
+
+        }
+
+        &:hover {
+            width: $navbar-width__expanded;
+            transition: all 0.25s ease-in-out;
+
+            & .label {
+                display: initial;
+            }
         }
     }
 </style>

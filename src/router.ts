@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Log from './views/Log.vue';
-import Graph from './views/Graph.vue';
-import Excercise from './views/Excercise.vue';
-import Measurement from './views/Measurements.vue';
-import Nutrition from './views/Nutrition.vue';
+import LogComponent from './views/LogComponent.vue';
+import StatisticsComponent from './views/StatisticsComponent.vue';
+import ExcerciseComponent from './views/ExcerciseComponent.vue';
+import MeasurementComponent from './views/MeasurementsComponent.vue';
+import NutritionComponent from './views/NutritionComponent.vue';
 
 Vue.use(Router)
 
@@ -17,27 +17,27 @@ export default new Router({
     },
     {
       path: '/log',
-      component: Log
+      component: LogComponent
     },
     {
-      path: '/graph',
-      name: 'graph',
-      component: Graph
+      path: '/statistics',
+      name: 'statistics',
+      component: StatisticsComponent
     },
     {
       path: '/excercise',
       name: 'excercise',
-      component: Excercise
+      component: ExcerciseComponent
     },
     {
       path: '/measurement',
       name: 'measurement',
-      component: Measurement
+      component: MeasurementComponent
     },
     {
       path: '/nutrition',
       name: 'nutrition',
-      component: Nutrition
+      component: NutritionComponent
     }
   ]
 })

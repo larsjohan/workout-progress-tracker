@@ -1,8 +1,8 @@
 
 export default abstract class EntityBase {
-    _id?: string;
-    createdDate?: Date;
-    updatedDate?: Date;
+    public _id?: string;
+    public createdDate?: Date;
+    public updatedDate?: Date;
 
     constructor() {
         this._id = '';

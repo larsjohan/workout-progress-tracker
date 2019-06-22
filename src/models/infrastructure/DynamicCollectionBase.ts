@@ -3,7 +3,7 @@ import { IStorageDriverExtended, ElectronStorage } from 'tedb-electron-storage';
 import { Datastore, Cursor, IupdateOptions, IindexOptions, Index } from 'tedb';
 import EntityBase from './EntityBase';
 
-export default class CollectionBase<T extends EntityBase> {
+export default class DynamicCollectionBase<T extends EntityBase> {
     private static readonly DB_NAME: string = 'WorkoutProgressTracker';
 
     private readonly collectionName: string;
@@ -12,7 +12,7 @@ export default class CollectionBase<T extends EntityBase> {
     
     constructor(collectionName: string) {
         this.collectionName = collectionName;
-        this.storage = new ElectronStorage(CollectionBase.DB_NAME, collectionName);
+        this.storage = new ElectronStorage(DynamicCollectionBase.DB_NAME, collectionName);
         this.datastore = new Datastore({storage: this.storage});
     }  
 

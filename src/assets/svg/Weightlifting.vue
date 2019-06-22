@@ -1,4 +1,5 @@
 <template>
+<!--0 0 64 64-->
     <svg version="1.1" 
          id="Capa_1" 
          xmlns="http://www.w3.org/2000/svg" 
@@ -7,7 +8,7 @@
          y="0px"
          :width="width"
          :height="height"
-         viewBox="0 0 64 64" 
+         :viewBox="this.customViewBox" 
          xml:space="preserve">
         <g :fill="color" id="Clocks_1_">
             <path id="Clocks" d="M63.022,26.237c-0.665-0.798-1.601-1.255-2.568-1.255H59v-1.174c0-2.109-1.832-3.826-4.083-3.826H53v-2.167
@@ -42,6 +43,7 @@ import SvgIcon from '../../mixins/SvgIcon';
 @Component
 export default class Weightlifting extends Mixins(SvgIcon) {
 
+    private customViewBox: string = '0 0 64 64';
 }
 </script>
 

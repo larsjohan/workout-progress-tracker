@@ -1,6 +1,6 @@
 <template>
   <div class="graph">
-    <h1>Nutrition-component</h1>
+    <h1>Graph-component</h1>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component({})
-export default class Nutrition extends Vue {}
+export default class StatisticsComponent extends Vue {}
 </script>
 
 <style lang="scss" scoped>

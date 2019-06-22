@@ -1,5 +1,6 @@
 <template>
-    <svg viewBox="0 0 512 512.00745" 
+<!--0 0 512 512.00745-->
+    <svg :viewBox="viewBox" 
          :width="width" 
          :height="height"
          xmlns="http://www.w3.org/2000/svg">

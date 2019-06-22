@@ -30,4 +30,9 @@ export default class App extends Vue {
 
 <style lang="scss">
   @import "assets/scss/styles";
+
+  main {
+    margin: 25px;
+  }
+
 </style>
